@@ -26,7 +26,7 @@ def __connect(host):
     """
     global pg_pool
     pg_config['host'] = host
-    pg_pool = SimpleConnectionPool(1, 1, **pg_config)
+    pg_pool = SimpleConnectionPool(1, 10, **pg_config)
 
 
 def postgres(request):
